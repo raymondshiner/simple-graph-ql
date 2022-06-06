@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/simple-graph-ql/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/simple-graph-ql",
+        "index": "apps/simple-graph-ql/src/index.html",
+        "baseHref": "/",
+        "main": "apps/simple-graph-ql/src/main.tsx",
+        "polyfills": "apps/simple-graph-ql/src/polyfills.ts",
+        "tsConfig": "apps/simple-graph-ql/tsconfig.app.json",
+        "assets": [
+          "apps/simple-graph-ql/src/favicon.ico",
+          "apps/simple-graph-ql/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/simple-graph-ql/src/environments/environment.ts",
+              "with": "apps/simple-graph-ql/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "simple-graph-ql:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "simple-graph-ql:build:development"
+        },
+        "production": {
+          "buildTarget": "simple-graph-ql:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/simple-graph-ql/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/simple-graph-ql"],
+      "options": {
+        "jestConfig": "apps/simple-graph-ql/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

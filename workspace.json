@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "simple-graph-ql": "apps/simple-graph-ql",
+    "simple-graph-ql-e2e": "apps/simple-graph-ql-e2e"
+  }
+}
