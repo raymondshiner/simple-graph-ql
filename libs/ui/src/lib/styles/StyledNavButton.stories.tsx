@@ -6,7 +6,10 @@ export default {
   title: 'StyledNavButton',
 } as Meta;
 
-const Template: Story = (args) => <StyledNavButton>Some Text</StyledNavButton>;
-
+const Template: Story = (args) => (
+  <div style={{ background: '#bdbdbd', padding: 20 }}>
+    <StyledNavButton {...args}>Some Text</StyledNavButton>
+  </div>
+);
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = { selected: false };

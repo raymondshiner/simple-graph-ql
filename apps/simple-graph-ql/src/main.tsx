@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: #bdbdbd;
     font-family: Open-Sans, Helvetica, sans-serif;
+    color: '#3d3d3d'
   }
 `;
 

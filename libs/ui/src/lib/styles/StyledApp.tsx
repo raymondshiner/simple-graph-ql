@@ -6,4 +6,5 @@ export const StyledApp = styled.div`
   align-items: center;
   padding: 50px 20px;
   background-color: #bdbdbd;
+  font-family: 'Inter';
 `;
