@@ -1,3 +1,4 @@
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
@@ -13,13 +14,20 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const client = new ApolloClient({
+  uri: 'https://doesnt.really.work.io',
+  cache: new InMemoryCache(),
+});
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
   <StrictMode>
-    <App />
-    <GlobalStyle />
+    <ApolloProvider client={client}>
+      <App />
+      <GlobalStyle />
+    </ApolloProvider>
   </StrictMode>
 );

@@ -9,7 +9,9 @@
   },
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.6",
     "core-js": "^3.6.5",
+    "graphql": "^16.5.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-is": "18.1.0",
@@ -58,6 +60,7 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
     "jest": "27.5.1",
+    "mock-apollo-client": "^1.2.0",
     "nx": "14.1.9",
     "prettier": "^2.5.1",
     "react-test-renderer": "18.1.0",
