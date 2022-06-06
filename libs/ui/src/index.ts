@@ -1,1 +1,2 @@
-export * from './lib/ui';
+export * from './lib/styles/StyledApp';
+export * from './lib/styles/StyledTitle';

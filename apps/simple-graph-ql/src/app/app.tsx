@@ -1,14 +1,9 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { StyledApp, StyledTitle } from '@simple-graph-ql/ui';
 
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="simple-graph-ql" />
+      <StyledTitle>My GraphQL Application</StyledTitle>
     </StyledApp>
   );
 }
