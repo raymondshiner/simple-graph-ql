@@ -1,4 +1,3 @@
-import { StyledNavButton } from '@simple-graph-ql/ui';
 import { Meta, Story } from '@storybook/react';
 import { App } from './app';
 
@@ -7,10 +6,6 @@ export default {
   title: 'App',
 } as Meta;
 
-const Template: Story = (args) => (
-  <StyledNavButton>
-    <App {...args} />
-  </StyledNavButton>
-);
+const Template: Story = (args) => <App {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {};
