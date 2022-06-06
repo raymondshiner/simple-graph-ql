@@ -1,10 +1,10 @@
-import { StyledApp, StyledTitle } from '@simple-graph-ql/ui';
+import { StyledNavButton, StyledTitle } from '@simple-graph-ql/ui';
 
 export function App() {
   return (
-    <StyledApp>
+    <StyledNavButton>
       <StyledTitle>My GraphQL Application</StyledTitle>
-    </StyledApp>
+    </StyledNavButton>
   );
 }
 
