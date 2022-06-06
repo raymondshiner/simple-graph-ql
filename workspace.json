@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "simple-graph-ql": "apps/simple-graph-ql",
-    "simple-graph-ql-e2e": "apps/simple-graph-ql-e2e"
+    "simple-graph-ql-e2e": "apps/simple-graph-ql-e2e",
+    "ui": "libs/ui"
   }
 }
