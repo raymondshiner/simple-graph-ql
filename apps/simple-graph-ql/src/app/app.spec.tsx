@@ -61,7 +61,16 @@ describe('App', () => {
     fireEvent.click(getButtonByName('Users'));
 
     screen.getByTestId(UserListId);
-    // await assertComponentIsNull(PostsByUserId);
-    // await assertComponentIsNull(PostListId);
+    await assertComponentIsNull(PostsByUserId);
+    await assertComponentIsNull(PostListId);
+  });
+
+  it('should render the Posts Component again when the user clicks on Users after clicking on another nav button', async () => {
+    fireEvent.click(getButtonByName('Users'));
+    fireEvent.click(getButtonByName('Posts'));
+
+    screen.getByTestId(PostListId);
+    await assertComponentIsNull(PostsByUserId);
+    await assertComponentIsNull(UserListId);
   });
 });
