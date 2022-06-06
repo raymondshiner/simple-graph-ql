@@ -13,7 +13,10 @@ export function App() {
   const [activeComponent, setActiveComponent] = useState<string>('posts');
 
   const NavButton: FC<NavButtonProps> = ({ component, text }) => (
-    <StyledNavButton onClick={() => setActiveComponent(component)}>
+    <StyledNavButton
+      onClick={() => setActiveComponent(component)}
+      selected={component === activeComponent}
+    >
       {text}
     </StyledNavButton>
   );
@@ -33,6 +36,11 @@ export function App() {
 
 interface ComponentToRenderProps {
   component: string;
+}
+
+interface NavButtonProps {
+  component: string;
+  text: string;
 }
 
 const ComponentToRender: FC<ComponentToRenderProps> = ({ component }) => {
