@@ -1,6 +1,18 @@
+# SimpleGraphQL
+
+A Simple client side React GraphQL Web App designed to showcase my passions and skillset.
+
+This project was:
+- Designed from scratch in [Figma](https://www.figma.com/) using scalable design best practices (both in UX/UI and figma layout). Design Files available [here](https://www.figma.com/file/VsQnLFK5WqzKiIzusF4ZK7/Untitled?node-id=0%3A1).
+- Developed using [nx.dev](https://nx.dev/) as the core project architecture.
+- Developed using only [Typescript](https://www.typescriptlang.org/), [URQL](https://formidable.com/open-source/urql/), and [Styled-Components](https://styled-components.com/)
+- 100% Developed using [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [Jest](https://jestjs.io/) and [Cypress.io](https://www.cypress.io/)
+- Entirely Documented using [Storybook](https://storybook.js.org/) 
+- Uses [Mock Service Worker](https://mswjs.io/docs/getting-started/mocks/graphql-api) for 100% Client Side mocking. This means that you can have the app running entirely locally without online capabilities (instructions below). In fact this app was entirely developed against mocks with the actual API being connected only at the end, to simulate the Real world scenario of a Front End Team working Independently of a Backend Team. 
+- Uses [GraphQLZero](https://graphqlzero.almansi.me/) as a dummy api in place of a graphQL server (as this app is only focused on the client side).
 
 
-# SimpleGraphQl
+## NX.Dev Auto Generated README
 
 This project was generated using [Nx](https://nx.dev).
 
