@@ -1,3 +1,4 @@
+import { StyledApp } from '@simple-graph-ql/ui';
 import { Meta, Story } from '@storybook/react';
 import { App } from './app';
 
@@ -6,7 +7,10 @@ export default {
   title: 'App',
 } as Meta;
 
-const Template: Story = (args) => <App {...args} />;
-
+const Template: Story = (args) => (
+  <StyledApp>
+    <App {...args} />
+  </StyledApp>
+);
 export const Primary = Template.bind({});
 Primary.args = {};

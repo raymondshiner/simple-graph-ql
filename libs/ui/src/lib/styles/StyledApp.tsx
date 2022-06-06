@@ -5,4 +5,5 @@ export const StyledApp = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
+  background-color: #bdbdbd;
 `;
